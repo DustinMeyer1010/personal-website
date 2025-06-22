@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  gap: 25rem;
 }
 
 
@@ -26,35 +27,3 @@
   transform: skew(10deg);
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
 }
-
-.chat {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  padding: 20px;
-  max-width: 70%;
-}
-
-.inner_chat {
-  height: auto;
-  width: fit-content;
-  padding: 50px;
-  background: black;
-  clip-path: polygon(20px 20px, 100% 0, 100% 100%, 0 90%);
-  filter: drop-shadow(0 0 1 white);
-}
-
-.inner_chat_shadow {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: white;
-  top: 0;
-  left: 0;
-  clip-path: polygon(30px 30px, 100% 0, 99% 95%, 0 83%);
-  z-index: -1;
-}
-

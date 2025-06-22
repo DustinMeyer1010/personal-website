@@ -1,0 +1,32 @@
+
+.chat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  padding: 15px;
+  max-width: 75%;
+}
+
+.inner_chat {
+  height: auto;
+  width: 100%;
+  padding: 30px 50px;
+  background: black;
+  clip-path: polygon(20px 20px, 100% 0, 100% 100%, 0 90%);
+  filter: drop-shadow(0 0 1 white);
+}
+
+.inner_chat_shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  clip-path: polygon(30px 30px, 100% 0, 99% 95%, 0 83%);
+  z-index: -1;
+}
+
