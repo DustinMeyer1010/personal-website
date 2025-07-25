@@ -1,44 +1,70 @@
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
-    height: 100%;
-    font-size: 25px;
-    padding-left: 30px;
+:global(.theme-persona) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        height: 100%;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .link:hover {
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+    .link {
+        position: relative;
+        color: white;
+        background: black;
+        transform: rotate(-10deg);
+        padding: 10px 20px;
+        z-index: -3;
+        box-shadow: -5px -5px 0 white;
+        transition: all 0.3s ease;
+    }
+
+
+    .bar {
+        position: absolute;
+        width: 90px;
+        height: 25px;
+        top: 0px;
+        left: -13px;
+        transform: rotate(-30deg);
+        background: black;
+        z-index: -1;
+        box-shadow: -5px -5px 0 red;
+        
+    }
 }
 
-.link:hover {
-    transform: rotate(-5deg) scale(1.1);
+
+:global(.theme-dark) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        width: 100%;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .link:hover {
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+
 }
 
-.link {
-    position: relative;
-    color: white;
-    background: black;
-    transform: rotate(-10deg);
-    padding: 10px 20px;
-    z-index: -3;
-    box-shadow: -5px -5px 0 white;
-    transition: all 0.3s ease;
-}
-
-
-.bar {
-    position: absolute;
-    width: 90px;
-    height: 25px;
-    top: 0px;
-    left: -13px;
-    transform: rotate(-30deg);
-    background: black;
-    z-index: -1;
-    box-shadow: -5px -5px 0 red;
-    
-}
 
 

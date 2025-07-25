@@ -1,17 +1,54 @@
-import styles from "./page.module.css";
+'use client'
+import Styles from "./page.module.css";
 import Button from "./component/button"
 import SentMessage from "./component/sent_message";
 import ReceivedMessage from "./component/received_message";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [activeSection, setActiveSection] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY < 300) {
+        setActiveSection(0);
+      } else if (scrollY < 600) {
+        setActiveSection(1);
+      } else if (scrollY < 900) {
+        setActiveSection(2);
+      } else {
+        setActiveSection(3);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className={styles.page} >
-      {/*<Button></Button>*/}
-      <div className={styles.info_box}> 
-          <h1 className={styles.title}>Dustin Meyer</h1>
+    <div className={`${Styles.page}` } >
+      <div className={Styles.info_box}> 
+          <h1 className={Styles.title}>Dustin Meyer</h1>
       </div>
       <div style={{width: "75%", display: "flex", flexDirection: "column", gap: "20px"}}>
         <h1>Chat Logs</h1>
+      <div className={`${Styles.section} ${activeSection >= 0 ? Styles.visible : ''}`}>
+        🟢 First Section
+      </div>
+      <div className={`${Styles.section} ${activeSection >= 1 ? Styles.visible : ''}`}>
+        🟡 Second Section
+      </div>
+      <div className={`${Styles.section} ${activeSection >= 2 ? Styles.visible : ''}`}>
+        🔵 Third Section
+      </div>
+      <div className={`${Styles.section} ${activeSection >= 3 ? Styles.visible : ''}`}>
+        🟣 Final Section
+      </div>
+
+
         <SentMessage value="Let's Go"/>
         <ReceivedMessage value="Very Nice"/>
         <SentMessage value="That Shadow looked tough. If we keep rushing in like this, someone's gonna get hurt!"/>

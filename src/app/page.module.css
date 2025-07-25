@@ -1,11 +1,11 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 25rem;
-}
-
+:global(.theme-persona){
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 25rem;
+  }
 
 .info_box {
   position: relative;
@@ -19,11 +19,31 @@
   box-shadow: 10px 10px 0 white, -10px -10px 0 white;
 }
 
-.info_box .title {
-  color: black;
-  background: white;
-  height: fit-content;
-  padding: 5px 30px;
-  transform: skew(10deg);
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  .info_box .title {
+    color: black;
+    background: white;
+    height: fit-content;
+    padding: 5px 30px;
+    transform: skew(10deg);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
+
+
+  .section {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.6s ease;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #eee;
+  border-radius: 8px;
 }
+
+/* Slide in when visible */
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+
