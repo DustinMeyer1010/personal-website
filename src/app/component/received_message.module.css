@@ -7,9 +7,15 @@
   width: fit-content;
   height: auto;
   padding: 15px;
-  max-width: 75%;
+  max-width: 60%;
   align-self: flex-end;
+  font-family: var(--font-arsenal), sans-serif;
+  font-weight: 700;
+  letter-spacing: .10rem;
 }
+
+
+
 
 .inner_chat {
   height: auto;
@@ -26,7 +32,7 @@
   height: 100%;
   width: 100%;
   background: white;
-  top: 0;
+  top: 0; 
   left: 0;
   clip-path: polygon(10px 0px,100% 20px, 95% 95%, 0px 85%);
   z-index: -1;

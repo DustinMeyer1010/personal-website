@@ -44,7 +44,7 @@
 }
 
 
-:global(.theme-dark) {
+:global(.theme-dark), :global(.theme-light) {
     .nav {
         position: fixed;
         top: 0;

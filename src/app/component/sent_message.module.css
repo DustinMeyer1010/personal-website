@@ -7,8 +7,18 @@
   width: fit-content;
   height: auto;
   padding: 15px;
-  max-width: 75%;
+  max-width: 60%;
+    font-family: var(--font-arsenal), sans-serif;
+  font-weight: 700;
+  letter-spacing: .10rem;
 }
+
+.picture {
+  height: 100px;
+  width: 100px;
+  background: black;
+}
+
 
 .inner_chat {
   height: auto;
