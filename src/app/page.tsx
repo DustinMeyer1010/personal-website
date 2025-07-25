@@ -35,21 +35,22 @@ export default function Home() {
       </div>
       <div style={{width: "75%", display: "flex", flexDirection: "column", gap: "20px"}}>
         <h1>Chat Logs</h1>
-      <div className={`${Styles.section} ${activeSection >= 0 ? Styles.visible : ''}`}>
-        🟢 First Section
-      </div>
-      <div className={`${Styles.section} ${activeSection >= 1 ? Styles.visible : ''}`}>
-        🟡 Second Section
-      </div>
-      <div className={`${Styles.section} ${activeSection >= 2 ? Styles.visible : ''}`}>
-        🔵 Third Section
-      </div>
-      <div className={`${Styles.section} ${activeSection >= 3 ? Styles.visible : ''}`}>
-        🟣 Final Section
-      </div>
-
-
+        
+      <div className={`${Styles.left_message} ${activeSection >= 0 ? Styles.visible : ''}`}>
         <SentMessage value="Let's Go"/>
+      </div>
+      <div className={`${Styles.right_message} ${activeSection >= 1 ? Styles.visible : ''}`}>
+                <ReceivedMessage value="Very Nice"/>
+      </div>
+      <div className={`${Styles.left_message} ${activeSection >= 2 ? Styles.visible : ''}`}>
+        <SentMessage value="Let's Go"/>
+      </div>
+      <div className={`${Styles.right_message} ${activeSection >= 3 ? Styles.visible : ''}`}>
+         <ReceivedMessage value="Very Nice"/>
+      </div>
+
+
+        
         <ReceivedMessage value="Very Nice"/>
         <SentMessage value="That Shadow looked tough. If we keep rushing in like this, someone's gonna get hurt!"/>
         <ReceivedMessage value="I've analyzed the pattern of their patrols. If we time it right, we can sneak past without triggering an alarm. But one wrong move and it's over."/>

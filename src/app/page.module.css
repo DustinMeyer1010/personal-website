@@ -29,13 +29,24 @@
   }
 
 
-  .section {
+  .left_message {
   opacity: 0;
+
   transform: translateX(-100px);
   transition: all 0.6s ease;
   margin: 2rem 0;
   padding: 2rem;
-  background: #eee;
+  border-radius: 8px;
+}
+
+.right_message {
+  opacity: 0;
+    display: flex;
+  justify-content: flex-end;
+  transform: translateX(100px);
+  transition: all 0.6s ease;
+  margin: 2rem 0;
+  padding: 2rem;
   border-radius: 8px;
 }
 
