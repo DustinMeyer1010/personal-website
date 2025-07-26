@@ -1,28 +1,28 @@
 'use client'
 
-import Styles from "./page.module.css"
-import RotationLetters from "./RotationLetters";
+import { useEffect, useState } from "react";
+import { useTheme } from "../component/ThemeContext";
+import { themeClassMap } from "../component/themeclassmap";
+import PersonaProjects from "./persona_projects";
 
 
 export default function Projects() {
+    const { theme } = useTheme();
 
 
-  return (
-    <div className={Styles.page}>
-      Project Page
-      <div className={Styles.character}>
-        <div className={Styles.test}></div>
-        <div className={Styles.project_container}>
-          <div className={Styles.circle}></div>
-          <div className={Styles.project}></div>
-            <div className={Styles.text}>
-              
-              <RotationLetters letter="URMC-HUB"></RotationLetters>
-            </div>
-            <div className={Styles.text1}>GITHUB</div>
-        </div>
-        
-      </div>
-    </div>
-  );
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
+    if (!hasMounted) return null; // Avoid SSR mismatch
+
+    const className = themeClassMap[theme] ?? 'theme-persona';
+
+    switch (className) {
+      case "theme-persona": return <PersonaProjects></PersonaProjects>
+      case "theme-dark": return <div></div>
+      default: return <div></div>
+    }
 }

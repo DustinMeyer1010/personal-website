@@ -39,6 +39,8 @@
 .info_box p {
   text-align: left;
   font-size: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
   .info_box .title {

@@ -76,7 +76,7 @@ const Persona = () => {
             <div className={`${Styles.page}` } >
       <div className={Styles.info_box}> 
           <h1 className={Styles.title}>Dustin Meyer</h1>
-          <p>Full stack developer skilled in Go, React, and TypeScript. Building web apps that solve real problems with clean, efficient code.</p>
+          <p>A Full stack developer skilled in Go, Python, React, and TypeScript. Building web apps that solve real problems with clean, efficient code.</p>
       </div>
       <div style={{width: "75%", display: "flex", flexDirection: "column", gap: "20px"}}>
         <h1 className={`${Styles.title_chat} ${removeChatNotification ? Styles.remove : ""}`}>Log History<br/><Image src={ArrowDown} alt=""></Image></h1>
