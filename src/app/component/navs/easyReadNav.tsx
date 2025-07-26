@@ -1,21 +1,22 @@
 
 import style from "./nav.module.css"
 import ThemeSelector from "../ThemeSelector"
+import Link from "next/link"
 
 const EasyReadNav = () => {
     
 
     return (
         <nav className={style.nav}>
-            <a href="/" className={style.link}>
+            <Link href="/" className={style.link}>
                 Home
-            </a>
-            <a href="/Projects" className={style.link}>
+            </Link>
+            <Link href="/Projects" className={style.link}>
                 Projects
-            </a>
-            <a href="/Resume" className={style.link}>
+            </Link>
+            <Link href="/Resume" className={style.link}>
                 Resume
-            </a>
+            </Link>
             <ThemeSelector></ThemeSelector>
         </nav>
     )

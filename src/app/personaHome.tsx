@@ -2,19 +2,25 @@ import { useEffect, useState } from "react";
 import Styles from "./styles/personaHome.module.css"
 import SentMessage from "./component/sent_message";
 import ReceivedMessage from "./component/received_message";
+import ArrowDown from "../../public/arrowdown.png"
+import Image from "next/image";
+
 
 const interviewerLines = [
-  "Well, well… looks like we've found our next wildcard. Tell me, what kind of skills do you bring to the table? Are you the kind of Phantom Thief who can code his way out of any Palace?",
-  "Hah! Bold words. But tell me this… do you just follow the code, or can you bend it to your will?",
-  "Not bad, Joker. But what about teamwork? Can you fight alongside a crew, or are you just a lone wolf in the Metaverse?",
-  "Hmph… looks like you've got style and substance. Welcome to the team, Phantom Coder. Let's change the hearts of bad software everywhere!",
+  "Looks like we’ve found a wildcard. What skills do you bring? Can you code your way out of a Palace?",
+  "Bold words. But can you bend the code to your will?",
+  "Teamwork matters too. Can you fight alongside a crew?",
+  "Impressive... Style and skill. Welcome to the team, Phantom Coder!",
 ];
 
 const dustinLines = [
-  "Heh, you could say I've stolen a lot of knowledge. I'm fluent in Go, TypeScript, JavaScript, and Python, and I build full-stack web apps using frameworks like React and Next.js. I also design RESTful APIs, backend systems, and front-end interfaces that feel as smooth as Joker's All-Out Attack!",
-  "I've got a Bachelor's in Computer Science with a minor in Cybersecurity, so I don't just code — I understand algorithms, data structures, and secure software design. I've even built and maintained tools like URMC-HUB, helping real organizations manage their workflows efficiently. You could say I'm the navigator you can always rely on.",
-  "Teamwork's part of my code. I've got experience tutoring, helping others debug, and working with cross-functional teams, so communication is my support skill. Whether it's pair programming, code reviews, or explaining complex CS concepts clearly, I make sure everyone levels up together.",
+  "I’m fluent in Go, TypeScript, JavaScript, and Python, building full‑stack apps with React and Next.js. I design REST APIs and smooth UIs like Joker’s All‑Out Attack.",
+  "I’ve got a CS degree with a Cybersecurity minor, strong in algorithms and software design. I even built tools like URMC‑HUB for real organizations.",
+  "I thrive on teamwork—tutoring, debugging, and collaborating are my support skills. I make sure the whole squad levels up together.",
 ];
+
+const personalInfo = "In a world driven by technology, every line of code is a step toward shaping the future. Creativity fuels innovation, and knowledge unlocks endless possibilities. With passion and determination, we can build experiences that inspire, connect, and transform the way we live. The journey is just as important as the destination—so take the leap, learn, and create something extraordinary."
+
 
 
 const Persona = () => {
@@ -22,10 +28,21 @@ const Persona = () => {
 
 
   const [activeSection, setActiveSection] = useState(0);
+  const [removeChatNotification, setRemoveChatNotficiation] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+
+      if (scrollY > 150) {
+        setRemoveChatNotficiation(true)
+      }
+      else {
+        setRemoveChatNotficiation(false)
+      }
+
+      console.log(removeChatNotification)
+
 
       if (scrollY < 300) {
         setActiveSection(0);
@@ -59,9 +76,11 @@ const Persona = () => {
             <div className={`${Styles.page}` } >
       <div className={Styles.info_box}> 
           <h1 className={Styles.title}>Dustin Meyer</h1>
+          <p>Full stack developer skilled in Go, React, and TypeScript. Building web apps that solve real problems with clean, efficient code.</p>
       </div>
       <div style={{width: "75%", display: "flex", flexDirection: "column", gap: "20px"}}>
-        <h1>Chat Logs</h1>
+        <h1 className={`${Styles.title_chat} ${removeChatNotification ? Styles.remove : ""}`}>Logs History<br/><Image src={ArrowDown} alt=""></Image></h1>
+        
         
       <div className={`${Styles.left_message} ${activeSection >= 1 ? Styles.visible : ''}`}>
 
@@ -110,7 +129,7 @@ const Persona = () => {
           </div>
       </div>
         <div className={`${Styles.left_message} ${activeSection >= 7 ? Styles.visible : ''}`}>
-                <div className={Styles.column}>
+        <div className={Styles.column}>
           <div className={Styles.picture_left}></div>
           <div className={Styles.name_left}>Interviewer</div>
         </div>

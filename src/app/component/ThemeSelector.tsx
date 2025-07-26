@@ -1,19 +1,41 @@
 // components/ThemeSelector.tsx
 'use client';
-import { useTheme } from './ThemeContext';
+import { Theme, useTheme } from './ThemeContext';
+import Styles from "./themeSelector.module.css"
+import themeIcon from "../../../public/icons8-theme-50.png"
+import Image from "next/image";
+import { useEffect, useState } from 'react';
 
 const themes = ['light', 'dark', 'persona'] as const;
 
 export default function ThemeSelector() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
+  const [ showThemes, setShowThemes ] = useState(false)
+
+  const handleShowThemes = () => {
+      setShowThemes(!showThemes)
+      localStorage.setItem("showTheme", `${!showThemes}`)
+  } 
+
+  useEffect(() => {
+    const previousShowTheme = localStorage.getItem("showTheme")
+    if (previousShowTheme == null) {
+      return
+    }
+
+    if (previousShowTheme == "true") {
+      setShowThemes(true)
+    }
+  })
+
+
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value as typeof theme)}>
-      {themes.map((t) => (
-        <option key={t} value={t}>
-          {t}
-        </option>
-      ))}
-    </select>
+    <div className={Styles.theme_selection}>
+      <Image onClick={handleShowThemes} className={Styles.theme_image} src={themeIcon} alt="" />
+      <button title='Persona' onClick={() => setTheme("persona")} className={`${Styles.theme_option} ${Styles.persona} ${showThemes ? Styles.visible : ""}`}></button>
+      <button title='dark' onClick={() => setTheme("dark")} className={`${Styles.theme_option} ${Styles.dark} ${showThemes ? Styles.visible1 : ""}`}></button>
+      <button title='light' onClick={() => setTheme("light")} className={`${Styles.theme_option} ${Styles.light} ${showThemes ? Styles.visible2 : ""}`}></button>
+    </div>
   );
 }

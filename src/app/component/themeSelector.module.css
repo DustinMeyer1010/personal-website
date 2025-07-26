@@ -1,0 +1,60 @@
+.theme_selection {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+}
+
+.theme_image:hover {
+    transform: scale(1.1);
+}
+
+.theme_image {
+    height: 30px;
+    width: 30px;
+}
+
+.theme_option {
+    position: absolute;
+    opacity: 0;
+    transition: .3s ease;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 2px black;
+    z-index: -1;
+}
+
+.persona {
+    background: red;
+}
+
+.dark {
+    background: black;
+}
+
+.light {
+    background: white;
+}
+
+
+
+.visible {
+    opacity: 1;
+    transform: translate(-50px, 50px);
+}
+
+.visible1 {
+    opacity: 1;
+    transform: translate(-75px, 5px);
+}
+
+.visible2 {
+        opacity: 1;
+    transform: translate(-0px, 75px);
+}

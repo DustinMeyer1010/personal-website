@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    text-align: center;
     gap: 25rem;
     padding-bottom: 100px;
   }
@@ -11,13 +12,33 @@
 .info_box {
   position: relative;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
   padding: 20px;
+  margin-top: 20%;
   width: 700px;
-  height: 500px; 
+  height: auto; 
   background: black;
   transform: skew(-5deg);
   box-shadow: 10px 10px 0 white, -10px -10px 0 white;
+
+}
+
+.title_chat {
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% + 100px);
+  transform: translateX(-50%);
+  animation: bounce 0.6s infinite alternate;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.info_box p {
+  text-align: left;
+  font-size: 20px;
 }
 
   .info_box .title {
@@ -101,9 +122,21 @@
   box-shadow: 0px 0px 0px 2px white;
 }
 
-/* Slide in when visible */
 .visible {
   opacity: 1;
   transform: translateX(0);
 }
+
+.remove {
+  opacity: 0;
+}
+
+}
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    transform: translateX(-50%) translateY(-20px);
+  }
 }

@@ -2,14 +2,14 @@
 body.theme-persona {
   color: white;
   background-color: red;
-  background-image: URL("./assets/persona5-background.png");
+  background-image: URL("../../public/persona5-background.png");
   background-position: cover;
   background-attachment: fixed;
 }
 
 body.theme-dark {
   color: white;
-  background: black
+  background: 	#2B2B2B
 }
 
 body.theme-light {

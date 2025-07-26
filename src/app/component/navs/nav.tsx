@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import PersonaNav from "./personaNav"
 import DarkNav from "./easyReadNav"
 import EasyReadNav from "./easyReadNav"
+import ThemeSelector from "../ThemeSelector"
 
 
 const Nav = () => {
@@ -25,7 +26,8 @@ const Nav = () => {
 
     switch (className) {
       case "theme-persona": return <PersonaNav></PersonaNav>
-      default: return <EasyReadNav></EasyReadNav>
+      case "theme-dark": return <EasyReadNav></EasyReadNav>
+      default: return <ThemeSelector></ThemeSelector>
     }
 
 }

@@ -1,10 +1,5 @@
 'use client'
-import Styles from "./page.module.css";
-import Button from "./component/button"
-import SentMessage from "./component/sent_message";
-import ReceivedMessage from "./component/received_message";
 import { useEffect, useState } from "react";
-import { ST } from "next/dist/shared/lib/utils";
 import Persona from "./personaHome";
 import { useTheme } from "./component/ThemeContext";
 import { themeClassMap } from "./component/themeclassmap";
