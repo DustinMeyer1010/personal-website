@@ -7,6 +7,10 @@ body.theme-persona {
   background-attachment: fixed;
 }
 
+body.bg-Projects {
+  background-image: URL("../../public/FightBackground.png");
+}
+
 body.theme-dark {
   color: white;
   background: 	#2B2B2B

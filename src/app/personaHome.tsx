@@ -79,7 +79,7 @@ const Persona = () => {
           <p>Full stack developer skilled in Go, React, and TypeScript. Building web apps that solve real problems with clean, efficient code.</p>
       </div>
       <div style={{width: "75%", display: "flex", flexDirection: "column", gap: "20px"}}>
-        <h1 className={`${Styles.title_chat} ${removeChatNotification ? Styles.remove : ""}`}>Logs History<br/><Image src={ArrowDown} alt=""></Image></h1>
+        <h1 className={`${Styles.title_chat} ${removeChatNotification ? Styles.remove : ""}`}>Log History<br/><Image src={ArrowDown} alt=""></Image></h1>
         
         
       <div className={`${Styles.left_message} ${activeSection >= 1 ? Styles.visible : ''}`}>

@@ -5,6 +5,7 @@ import Nav from "@/app/component/navs/nav";
 import { ThemeProvider } from "./component/ThemeContext";
 import ThemeWrapper from "./component/ThemeWrapper";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
