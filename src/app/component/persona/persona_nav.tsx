@@ -1,7 +1,7 @@
 import Link from "next/link";
-import SpecialLettering from "../lettering";
+import SpecialLettering from "./persona_lettering";
 import ThemeSelector from "../ThemeSelector";
-import style from "./nav.module.css"
+import style from "../navs/nav.module.css"
 
 
 const PersonaNav = () => {

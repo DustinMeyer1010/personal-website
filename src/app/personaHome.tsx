@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Styles from "./styles/personaHome.module.css"
-import SentMessage from "./component/sent_message";
-import ReceivedMessage from "./component/received_message";
+import SentMessage from "./component/persona/sent_message";
+import ReceivedMessage from "./component/persona/received_message";
 import ArrowDown from "../../public/arrowdown.png"
 import Image from "next/image";
 

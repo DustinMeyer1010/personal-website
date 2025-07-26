@@ -1,14 +1,11 @@
 
 body.theme-persona {
+
   color: white;
   background-color: red;
   background-image: URL("../../public/persona5-background.png");
   background-position: cover;
   background-attachment: fixed;
-}
-
-body.bg-Projects {
-  background-image: URL("../../public/FightBackground.png");
 }
 
 body.theme-dark {

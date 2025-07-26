@@ -3,7 +3,7 @@
 import { useTheme } from "../ThemeContext"
 import { themeClassMap } from "../themeclassmap"
 import { useEffect, useState } from "react"
-import PersonaNav from "./personaNav"
+import PersonaNav from "../persona/persona_nav"
 import DarkNav from "./easyReadNav"
 import EasyReadNav from "./easyReadNav"
 import ThemeSelector from "../ThemeSelector"

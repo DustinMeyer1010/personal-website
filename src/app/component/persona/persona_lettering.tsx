@@ -1,5 +1,3 @@
-import { workerData } from "worker_threads";
-
 type Props = {
     word: string
 }
@@ -38,6 +36,7 @@ const SpecialLettering: React.FC<Props> = ( { word } ) => {
                 padding: "0px",
                 margin: "0px",
                 fontWeight: `${fontweight[fontidx]}`,
+                overflow: "visible",
                 transform: `rotate(${rotate}deg) translateY(${offset}px)`,
             }}
           >
