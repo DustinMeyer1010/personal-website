@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/app/component/navs/nav";
 import { ThemeProvider } from "./component/ThemeContext";
 import ThemeWrapper from "./component/ThemeWrapper";
+import ThemeSelector from "./component/ThemeSelector";
 
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
             <ThemeWrapper>
               <Nav></Nav>
               {children}
+              <ThemeSelector></ThemeSelector>
             </ThemeWrapper>
           </ThemeProvider>
         </body>

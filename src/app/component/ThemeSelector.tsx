@@ -14,19 +14,7 @@ export default function ThemeSelector() {
 
   const handleShowThemes = () => {
       setShowThemes(!showThemes)
-      localStorage.setItem("showTheme", `${!showThemes}`)
   } 
-
-  useEffect(() => {
-    const previousShowTheme = localStorage.getItem("showTheme")
-    if (previousShowTheme == null) {
-      return
-    }
-
-    if (previousShowTheme == "true") {
-      setShowThemes(true)
-    }
-  })
 
 
 
