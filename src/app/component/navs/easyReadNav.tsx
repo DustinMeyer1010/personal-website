@@ -1,6 +1,5 @@
 
 import style from "./nav.module.css"
-import ThemeSelector from "../ThemeSelector"
 import Link from "next/link"
 
 const EasyReadNav = () => {
