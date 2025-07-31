@@ -18,7 +18,7 @@ const PersonaNav = () => {
                 <SpecialLettering word="Projects"/>
                 <div className={style.bar}></div>
             </Link>
-            <Link href="/Resume" className={style.link}>
+            <Link href="/Dustin_Meyer_Resume.pdf" className={style.link}>
                 <SpecialLettering word="Resume"/>
                 <div className={style.bar}></div>
             </Link>

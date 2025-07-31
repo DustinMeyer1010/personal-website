@@ -16,7 +16,6 @@ const EasyReadNav = () => {
             <Link href="/Resume" className={style.link}>
                 Resume
             </Link>
-
         </nav>
     )
 }
